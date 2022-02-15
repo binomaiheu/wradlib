@@ -220,7 +220,7 @@ def get_rb_blob_data(datastring, blobid):
     return data
 
 
-def map_rb_data(data, datadepth, datashape):
+def map_rb_data(data, datadepth, datashape = 0):
     """Map BLOB data to correct DataWidth and Type and convert it
     to numpy array
 
@@ -231,7 +231,7 @@ def map_rb_data(data, datadepth, datashape):
     datadepth : int
         bit depth of Blob data
     datashape : tuple
-        expected data shape 
+        expected data shape, only used for the flags to truncate 
 
     Returns
     -------
